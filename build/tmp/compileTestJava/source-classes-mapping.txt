@@ -1,0 +1,4 @@
+cpm/shashank/devops/kpi/buildtime/EventParametersValidatorTest.java
+ cpm.shashank.devops.kpi.buildtime.EventParametersValidatorTest
+cpm/shashank/devops/kpi/buildtime/EventLogsFileProcessorTest.java
+ cpm.shashank.devops.kpi.buildtime.EventLogsFileProcessorTest
