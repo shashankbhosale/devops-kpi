@@ -6,15 +6,18 @@ Use Cases:
 - Service API call turnaround time measurement
 
 
- 
 
-####Prerequisites
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+#### Prerequisites
 - Gradle 6.7
 - Java 1.8
 
 
+--------------------------------------------------------------------------------------------------------------------------------
 
-##(Windows)
+## (Windows)
 #### How to run  
 1. Download the code into your desktop machine to 'C:/' directory
 2. open command prompt and navigate inside the downloaded project folder
@@ -45,7 +48,13 @@ Use Cases:
 3. Sample files can be found in 'src\test\resources'
 
 
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+
+
 ### About the output
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 ### 1. HSQL Database 
 **Database Details**:  DB Name: `devops.kpi`  |   Table Name : `PROCESSED_ENTITY`  |   Logs : 'devops.kpi.script' / 'devops.kpi.log'
@@ -59,14 +68,16 @@ Use Cases:
 3. If new event with same id is found (at later stage of log scan or after re-running the process against another log file), then that event id record is updated with new duration/alert/host information.
     -if not required then it can be commented out 
 
+--------------------------------------------------------------------------------------------------------------------------------
 
 ### 2. Java Bean 
 1. Output.java holds successfully processed Events and Unable to process Log Events due to missing data.
 2. Method `getRecordsWithDurationMoreThanMs(Long milliSecDuration)` can be used with in java to identify events that took longer than passed duration.
     - it is out of the box and irrespective of the DURATION_THRESHOLD (default 4ms)
 
+--------------------------------------------------------------------------------------------------------------------------------
 
-###3. Informative Loggers
+### 3. Informative Loggers
 Log level change be changed in file `logback.xml` (current level is INFO)
 ```
 1. Incomplete / Unprocessed events 
@@ -103,5 +114,7 @@ findAlertTakingMoreThan7s
 
 ```
 
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 
